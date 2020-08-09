@@ -1,0 +1,65 @@
+.header{
+    text-align: center;
+    color: #fffaeb;
+    size: 25px;
+}
+body{
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/024/967/008/large/valentin-franke-7.jpg?1584118067");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.title{
+    text-align: center;
+    color: #ffe61b;
+    size: 20px;
+}
+.formtable{
+    margin: auto;
+    width: 500px;
+}
+input{
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #fffaeb;
+    border-style: solid;
+    border-width: 0.5px;
+}
+button{
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: table-cell;
+}
+tr{
+    height: 20px;
+}
+.result {
+    text-align: left;
+    color: #d71900;
+    size: 20px;
+    padding-left: 25px;
+}
+.resulttable{
+    margin: auto;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-left: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 15px;
+}
+.footer{
+    text-align: center;
+    color: #ffe61b;
+    size: 20px;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+
+}

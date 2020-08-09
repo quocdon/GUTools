@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goal United Tools</title>
+    <link rel="stylesheet" href="GoalUnitedTools.css">
+</head>
+<body>
+<h1 class="header">GOAL UNITED TOOLS</h1>
+<hr><br><br>
+<h2 class="title">MARKET VALUE CALCULATOR</h2>
+<p class="header">Please input salary & experience of the player to the form below to calculate the Market value & Sales value</p>
+<br><br>
+<table class="formtable">
+    <tr>
+        <td class="title">Salary:</td>
+        <td><input type="text" id="salary"></td>
+        <td></td>
+        <td class="title">Experience: </td>
+        <td><input type="text" id="experience"></td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><button onclick="calculate()">Calculate</button></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<br><br>
+<h2 class="result" id="result"></h2></td>
+
+<p class="footer">This tool is written by Pham Quoc Don <br>
+Contact via: <br>
+Goal United Account: hanhtt (Vietnam Swerve) <br>
+Email: quocdon2991@gmail.com <br>
+Facebook: facebook.com/quocdon2991
+</p>
+<script>
+    function calculate() {
+        let exp = document.getElementById("experience");
+        let salary = document.getElementById("salary")
+        let marketValue = Math.round(parseInt(salary.value)/(0.9 + parseInt(exp.value)/500)*150);
+        let salesValue = Math.round(0.8* marketValue);
+        document.getElementById("result").innerHTML = "<table class='resulttable'>" +
+            "<tr>" +
+                "<td>Market Value: </td>"+
+                "<td>" + numberWithCommas(marketValue) + " Euro</td>"+
+            "</tr>"+
+            "<tr>" +
+                "<td>Sales Value</td>"+
+                "<td>" + numberWithCommas(salesValue) +  " Euro</td>"+
+            "</tr>"+
+            "</table>"
+    }
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+</script>
+</body>
+</html>
